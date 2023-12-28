@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <link rel="stylesheet" href="styles.css">
+      <title>Memory Cards</title>
+   </head>
+   <body>
+      <div id="welcome-screen">
+         <h1>Bienvenido al Juego de Memoria</h1>
+         <button id="play-btn">Jugar</button>
+         <button id="levels-btn" class="menu-btn" onclick="showLevels()">Niveles</button>
+         <button id="customize-btn" onclick="customizeCards()">Personalizar Cartas</button>  
+     </div>
+     
+      <div id="stats">
+         <p id="attempts">0 intentos</p>
+      </div>
+      
+      <button id="shuffle-btn">Barajar Cartas</button>
+
+      <div id="wrapper">
+         <!-- Agrega el elemento con el ID 'customize-section' aquí -->
+         <section id="customize-section">
+            <!-- Contenido de la sección de personalización -->
+         </section>
+
+         <div id="game"></div>
+      </div>
+      
+      <div id="timer">00:00</div>
+
+      <div id="levels-container"></div>
+
+      <script src="script.js"></script>
+
+   </body>
+</html>

@@ -1,0 +1,198 @@
+body {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin: 0;
+   background: black;
+   overflow: hidden;
+}
+
+#welcome-screen { 
+   text-align: center;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+#welcome-screen h1 { 
+   color: rgb(255, 255, 255);
+   font-size: 24px;
+   margin-bottom: 20px;
+}
+
+#welcome-screen button {
+   margin: 5px;
+   display: block;
+   color: #ffffff;
+   background-color: black;
+   border-color: #ffffff;
+   width: 150px;
+}
+
+/* styles.css */
+#stats {
+   color: white;
+   padding: 1rem;
+   text-align: center;
+   width: calc(100% - 2rem);
+   font-size: 3rem;
+   transition: top 0.5s ease; /* Agrega transición para un movimiento suave */
+}
+
+.show-stats {
+   top: 0;
+}
+
+#wrapper {
+   height: 100vh;
+   display: flex;
+   flex-direction: column;
+   flex-wrap: wrap;
+   align-items: center;
+   justify-content: space-evenly;
+   position: relative;
+}
+
+#game {
+   height: 100vh;
+   max-height: 700px;
+   display: flex;
+   flex-wrap:wrap;
+   align-items: center;
+   justify-content: center;
+}
+
+#stats {
+   color: white;
+   position: absolute;
+   padding: 1rem;
+   text-align: center;
+   width: calc(100% - 2rem);
+   font-size: 3rem;
+}
+
+.card {
+   width: 100px;
+   height: 140px;
+   margin: 1rem;
+   position: relative;
+   transition: transform 0.5s;
+   transform-style: preserve-3d;
+}
+
+.card.active {
+   transform: rotateY(180deg);
+}
+
+.card div {
+   width: 100%;
+   height: 100%;
+   border-radius: 1rem;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   position: absolute;
+   backface-visibility: hidden;
+   pointer-events: none;
+}
+
+.card .face {
+   background: #ffffff;
+   transform: rotateY( 180deg );
+   color: black;
+   font-size: 6rem;
+}
+
+.card .back {
+   border: 1px solid #ffffff;
+   background: url(img/card1.jpg) center / cover no-repeat;
+}
+
+#levels-container {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   height: 100vh;
+}
+
+.menu-btn {
+   margin: 10px;
+   font-size: 16px;
+   padding: 10px 20px;
+   background-color: #00c7ec;
+   color: white;
+   border: none;
+   border-radius: 5px;
+   cursor: pointer;
+   transition: background-color 0.3s;
+}
+
+.menu-btn:hover {
+   background-color: #57d8d8;
+}
+
+/* Estilo para el contenedor de filas */
+.card-rows {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+/* Estilo para cada fila */
+.card-row {
+   display: flex;
+   justify-content: space-around;
+   width: 100%; /* Asegura que ocupe el 100% del ancho */
+}
+
+/* Estilo para las cartas en modo vertical */
+.card {
+   margin-bottom: 10px; /* Ajusta el margen entre las cartas según tus necesidades */
+}
+
+
+/* styles.css */
+
+/* Estilos para el contenedor del botón */
+#back-to-home-container {
+   position: absolute;
+   bottom: 130px;
+   left: 387px;
+   z-index: 1000; /* Asegura que esté sobre otros elementos si es necesario */
+}
+
+/* Estilos para el botón */
+#back-to-home button {
+   background-color: #4CAF50;
+   color: white;
+   padding: 10px;
+   border: none;
+   border-radius: 5px;
+   cursor: pointer;
+}
+
+#back-to-home i {
+   margin-right: 5px;
+}
+
+#shuffle-btn {
+   display: none;
+}
+
+#timer {
+   display: none;
+   color: white; /* Ajusta el color blanco según sea necesario */
+}
+
+/* Ajusta el borde al tamaño de las fotos y agrega separación */
+.thumbnail {
+   box-sizing: border-box;
+   margin-right: 10px; /* Ajusta el valor según la separación deseada */
+}
+
+/* Estilo para la imagen seleccionada */
+.thumbnail.selected {
+   border: 2px solid blue;  /* Puedes ajustar el color y grosor del borde según tus preferencias */
+   margin: -2px;  /* Compensa el ancho del borde para evitar desplazamiento */
+}
